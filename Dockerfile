@@ -19,7 +19,7 @@ RUN curl -L -k \
     cp -rp release-default-x64 /opt/adchpp && \
     cp -rp /usr/src/adchpp/plugins/Script/examples /opt/adchpp/Scripts && \
     mkdir -p /usr/local/lib/lua/5.1 && \
-    cp /opt/bin/luadchpp.so /usr/local/lib/lua/5.1/luadchpp.so
+    ln -s /opt/adchpp/bin/luadchpp.so /usr/local/lib/lua/5.1/luadchpp.so
 
 WORKDIR /opt/adchpp
 
