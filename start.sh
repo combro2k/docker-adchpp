@@ -22,6 +22,12 @@ fi
 if [[ ! -f "/data/Script.xml" ]]
 then
     cp /usr/src/adchpp/etc/Script.xml /data
+    sed -i "s#\"/data/Scripts/\"#\"/data/Scripts/s\"#g" /data/Script.xml
+fi
+
+if [[ ! -d "/data/Scripts" ]]
+then
+    cp -rp /opt/adchpp/Scripts /data/Scripts
 fi
 
 if [[ ! -f "/data/users.txt" ]]
