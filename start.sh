@@ -27,6 +27,8 @@ fi
 if [[ ! -f "/data/users.txt" ]]
 then
     echo -n "[{\"password\":\"${PASS}\",\"nick\":\"admin\",\"level\":10,\"cid\":\"ABCDEFGHIJ1KLMNOPQRSTUVXYZA23BCDEFGHIJK\"}]" > /data/users.txt
+    echo "Created admin user with username admin"
+    echo "And password ${PASS}"
 fi
 
 /opt/adchpp/bin/adchppd -c /data
