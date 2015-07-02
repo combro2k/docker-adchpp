@@ -12,7 +12,7 @@ RUN mkdir -p /usr/src/adchpp
 WORKDIR /usr/src/adchpp
 
 RUN curl -L -k \
-    "http://downloads.sourceforge.net/project/adchpp/Releases/ADCH%2B%2B%202.11/2.11.2/adchpp_2.11.2_source.tar.gz?r=http%3A%2F%2Fadchpp.sourceforge.net%2F&ts=1421336548&use_mirror=netcologne" \
+    "http://sourceforge.net/projects/adchpp/files/Releases/ADCH%2B%2B%202.12/2.12.0/adchpp_2.12.0_source.tar.gz/download" \
     | tar zxv --strip-components=1 && \
     scons mode=release arch=x64 && \
     cd build && \
